@@ -1,0 +1,34 @@
+/* ✅ These three MUST be at the top */
+
+@import "tailwindcss";
+
+/* ✅ Custom styles can follow */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100vh;
+  @apply bg-white text-black;
+}
+
+.dark body {
+  @apply bg-black text-white;
+}
+
+/* Optional: floating animation */
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+.animate-float {
+  animation: float 5s ease-in-out infinite;
+}
